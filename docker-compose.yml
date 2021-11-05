@@ -1,0 +1,14 @@
+version: "3.8"
+
+volumes:
+  databases:
+
+services:
+  pg:
+    image: postgres
+    ports:
+      - 5432:5432
+    volumes:
+      - databases:/var/lib/postgresql/data
+    environment:
+      POSTGRES_HOST_AUTH_METHOD: trust

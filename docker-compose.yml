@@ -28,3 +28,6 @@ services:
       POSTGRES_USER: postgres
     depends_on:
       - pg
+    # https://medium.com/gogox-technology/debugging-rails-app-with-docker-compose-39a3767962f4
+    stdin_open: true
+    tty: true
